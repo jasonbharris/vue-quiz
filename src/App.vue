@@ -4,7 +4,7 @@
       v-if="questionsAnswered < questions.length"
       :questions="questions"
       :questionsAnswered="questionsAnswered"
-      @question-answered="questionAnswered"
+      :questionAnswered="questionAnswered"
     />
     <result v-else />
     <button type="button" class="reset-btn">Reset</button>
@@ -102,12 +102,12 @@ export default {
     Questions,
     Result,
   },
-  method: {
+  methods: {
     questionAnswered(is_correct) {
       if (is_correct) {
         this.totalCorrect++;
       }
-      this.questionsAnswered++;
+      this.questionAnswered++;
     },
   },
 };
