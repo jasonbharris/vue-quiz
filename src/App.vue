@@ -107,7 +107,7 @@ export default {
       if (is_correct) {
         this.totalCorrect++;
       }
-      this.questionAnswered++;
+      this.questionsAnswered++;
     },
   },
 };
